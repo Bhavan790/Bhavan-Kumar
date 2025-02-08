@@ -1,0 +1,128 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a267fb24",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ 6  8 10 12]\n",
+      "[-4 -4 -4 -4]\n",
+      "[ 5 12 21 32]\n",
+      "[0.2        0.33333333 0.42857143 0.5       ]\n",
+      "70\n",
+      "Result =  [ 4  8 12 16]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np \n",
+    "a=np.array([1,2,3,4])\n",
+    "b=np.array([5,6,7,8])\n",
+    "# addtion\n",
+    "print(a+b)\n",
+    "#subtraction\n",
+    "print(a-b)\n",
+    "#multiplication\n",
+    "print(a*b)\n",
+    "#division\n",
+    "print(a/b)\n",
+    "#dot\n",
+    "print(a.dot(b))\n",
+    "s=4\n",
+    "print(\"Result = \",a*s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "57377dce",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[1 6]\n",
+      " [0 4]]\n",
+      "[10 70]\n"
+     ]
+    }
+   ],
+   "source": [
+    "a1=np.array([[10,20],[30,40]])\n",
+    "b1=np.array([[3,7],[5,9]])\n",
+    "print(a1%b1)\n",
+    "print(np.cross(a1,b1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "6887dd44",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def my_func(x,y) :\n",
+    "    if x>y :\n",
+    "        return x-y\n",
+    "    else :\n",
+    "        return x+y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "8cd6fff9-b080-4b33-971a-26613d8ae844",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Result =  [4 2 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "arr1=[10,7,2]\n",
+    "arr2=[6,5,3]\n",
+    "v=np.vectorize(my_func)\n",
+    "print(\"Result = \",v(arr1,arr2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a84de31a-0ad8-4e7e-8bec-b86f555b53af",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
